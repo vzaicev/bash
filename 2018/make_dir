@@ -1,0 +1,28 @@
+#!/bin/bash
+list_name=" \
+    06_etimofei    \
+	07_jarsenii    \
+	08_zdenis      \
+	09_kmaxim      \
+	10_kstanislav  \
+	12_smixail     \
+	14_shandrei    \
+	15_yegor       \
+	   "
+list_dir="lab01 lab02 lab03 lab04 lab05 lab06"
+for i in $list_name
+do
+    if [ $i != "" ]; then
+        test -d $i || mkdir $i
+	    cd ./$i
+        for j in $list_dir
+        do 
+            test -d $j || mkdir $j
+            cd $j
+            test -f "${j}.sh" || echo "#!/bin/bash" > "${j}.sh"
+            cd ..
+        done
+		cd ..
+	fi
+done
+
