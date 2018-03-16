@@ -6,6 +6,7 @@ then
 	echo 
 	echo
 fi
+	echo "Enter one integer number"
 	declare num
 	read num
 if test $num -ge 0
