@@ -8,8 +8,19 @@ then
 	echo 
 	echo
 fi
-FILE=$1
+if [ "$1" == "-task" ];
+then
+	FILE=$2
+	shift
+else
+	FILE=$1
+fi
 shift
+if [ -z $FILE ];
+then
+	echo "There is no file address"
+	exit 0
+fi
 if [ -f $FILE ]; then
 	echo "File '$FILE' exists."
 	echo

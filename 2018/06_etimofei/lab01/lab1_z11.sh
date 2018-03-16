@@ -6,4 +6,5 @@ then
 	echo 
 	echo
 fi
-echo The last arguement was ${!#}
+
+echo The last arguement was $_
