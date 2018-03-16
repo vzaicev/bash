@@ -13,7 +13,7 @@ shift
 if [ -f $FILE ]; then
 	echo "File '$FILE' exists."
 	echo
-	sh ./$FILE $@
+	bash $FILE $@
 	echo
 	echo "This script has just run another script"
 else
