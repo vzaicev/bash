@@ -5,11 +5,15 @@ echo "17. Сравнить две числовые переменные и ес�
 echo "то вывести сообщение об этом, используя команду [."
 echo
 echo
-
-val1=6
-if [ $val1 -gt 5 ]
-then
-	echo "The test value $val1 is greater than 5"
-else
-	echo "The test value $val1 is not greater than 5"
 fi
+echo "Введите первую числовую переменную:"
+read val1
+echo "Введите вторую числовую переменную:"
+read val2 
+if [ $val1 -gt $val2 ]
+then
+	echo "The test value $val1 is greater than $val2"
+else
+	echo "The test value $val1 is not greater than $val2"
+fi
+exit 0
