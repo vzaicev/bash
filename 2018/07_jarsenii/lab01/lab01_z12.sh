@@ -23,11 +23,11 @@ index=$(($index+1))
 done < file
 echo "Input the user you want to find:"
 read b
-for ((a=0; a < ${#array[*]}; a++)) 
+for ((a=0; a < ${#array[@]}; a++)) 
 do 
-if  [ "$b" == "${array[$a]}" ]
+if  [[ ${array[$a]} =~ "$b" ]];
 then
-echo "$b is found"
+echo "${array[$a]} is found"
 rm file
 exit 0
 else
