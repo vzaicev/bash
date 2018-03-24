@@ -14,8 +14,8 @@ while read line; do
 array[$index]="$line" 
 index=$(($index+1)) 
 done < file
-mkdir -p $1
 regex=".*.sh"
+mkdir $1
 for ((a=0; a < ${#array[@]}; a++)) 
 do 
 cp ${array[$a]} $1
