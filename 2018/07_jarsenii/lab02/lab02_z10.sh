@@ -26,9 +26,12 @@ if [[ ${array[$a]} =~ $regex ]]; then
 chmod 755 $1/${array[$a]}
 fi
 done
-rm file
-echo "All created files and directorys will be deleted after 15 seconds!!!"
 sleep 15
-echo "File(directory) $1 was deleted"
-rm -rf $1
+for ((a=0; a < ${#array[@]}; a++)) 
+do
+echo "All created files will be deleted after 15 seconds!!!"
+rm $1/${array[$a]}
+echo "File $1 was deleted"
+done
+rm file
 fi
