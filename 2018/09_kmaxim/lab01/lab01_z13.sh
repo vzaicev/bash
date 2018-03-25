@@ -1,4 +1,4 @@
-#!/bin/bash
+ï»¿#!/bin/bash
 
 arr=($@)
 i=0
@@ -6,8 +6,8 @@ while [ $i -lt $# ]
 do
   if [ "${arr[$i]}" == "-task" ];
   then
-    echo "Çàäàíèå"
-    echo "13. Ñğàâíèòü äâå ÷èñëîâûå ïåğåìåííûå è åñëè ïåğâàÿ áîëüøå, òî âûâåñòè ñîîáùåíèå îá ıòîì, èñïîëüçóÿ êîìàíäó test"
+    echo "Ğ—Ğ°Ğ´Ğ°Ğ½Ğ¸Ğµ"
+    echo "13. Ğ¡Ñ€Ğ°Ğ²Ğ½Ğ¸Ñ‚ÑŒ Ğ´Ğ²Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾Ğ²Ñ‹Ğµ Ğ¿ĞµÑ€ĞµĞ¼ĞµĞ½Ğ½Ñ‹Ğµ Ğ¸ ĞµÑĞ»Ğ¸ Ğ¿ĞµÑ€Ğ²Ğ°Ñ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ, Ñ‚Ğ¾ Ğ²Ñ‹Ğ²ĞµÑÑ‚Ğ¸ ÑĞ¾Ğ¾Ğ±Ñ‰ĞµĞ½Ğ¸Ğµ Ğ¾Ğ± ÑÑ‚Ğ¾Ğ¼, Ğ¸ÑĞ¿Ğ¾Ğ»ÑŒĞ·ÑƒÑ ĞºĞ¾Ğ¼Ğ°Ğ½Ğ´Ñƒ test"
     echo ""
     echo ""
     break
@@ -15,10 +15,18 @@ do
   ((i++))
 done
 
-declare -i num1
-declare -i num2
+echo "Enter first number: "
 read num1
+echo "Enter second number: "
 read num2
+
+re='^[0-9]+$'
+if ! [[ $num1 =~ $re ]] || ! [[ $num2 =~ $re ]];
+then
+  echo "error: Not a number" >&2;
+  exit 1
+fi
+
 if test $num1 -gt $num2
 then
   echo "First number is greater than second"
