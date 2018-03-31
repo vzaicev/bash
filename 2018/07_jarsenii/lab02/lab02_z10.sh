@@ -14,14 +14,9 @@ while read line; do
 array[$index]="$line" 
 index=$(($index+1)) 
 done < file
-<<<<<<< HEAD
 reg=".*\.+.*"
 regex=".*\.sh"
 mkdir -p $1
-=======
-regex=".*.sh"
-mkdir $1
->>>>>>> 9f35fcc34a89197fab46f1aa4536937fffdcdc1f
 for ((a=0; a < ${#array[@]}; a++)) 
 do
 if [[ ${array[$a]} =~ $reg ]]; then
