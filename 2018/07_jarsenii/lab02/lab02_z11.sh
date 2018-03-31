@@ -5,15 +5,20 @@ echo "11. Написать скрипт, который выводит 10 соо
 echo
 echo
 fi
+function myf1
+{
 for ((a=0; a < 10; a++)) 
 do 
 echo "в первом потоке прошла 1 сек"
 sleep 1
 done
-echo
-echo
+}
+function myf2
+{
 for ((a=0; a < 5; a++)) 
 do 
 echo "во втором потоке прошо 2 сек"
 sleep 2
 done
+}
+myf1 & myf2

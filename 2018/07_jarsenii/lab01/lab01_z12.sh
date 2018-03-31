@@ -4,6 +4,7 @@ echo "Задание"
 echo "12. Создать файл с пользователями и проверить существует ли введенный пользователь."
 echo
 echo
+echo
 fi
 declare -i n
 echo "Input the number of users"
