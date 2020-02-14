@@ -7,7 +7,7 @@ echo
 echo
 echo
 fi
-
-
-echo "This console sucks"
-
+echo "-------------------"
+echo "Variable test:"
+myvar=2;
+echo $myvar; 
