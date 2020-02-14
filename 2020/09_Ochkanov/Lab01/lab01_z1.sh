@@ -8,3 +8,6 @@ echo
 echo
 fi
 
+
+echo "This console sucks"
+
