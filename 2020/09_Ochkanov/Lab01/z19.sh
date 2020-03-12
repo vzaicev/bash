@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ -n "$1" ] && [ "$1" == "-task" ]; then
-echo "Задание"
-echo "19. Сравнить две числовые переменные и вывести сообщение yes или no, используя команду [."
+echo "Task"
+echo "19. Compare two integers, output yes or no message depending on whether integers are equal, using [] command."
 echo
 echo
 echo
