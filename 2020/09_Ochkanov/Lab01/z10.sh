@@ -1,8 +1,8 @@
 #!/bin/bash
 if [ -n "$1" ] && [ "$1" == "-task" ];
 then
-	echo "Задание"
-	echo "10. Проверить положительное или отрицательное число."
+	echo "Task"
+	echo "10. Check whether the number is negative or positive."
 	echo 
 	echo
 fi
