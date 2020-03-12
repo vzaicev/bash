@@ -1,15 +1,15 @@
 #!/bin/bash
 if [ -n "$1" ] && [ "$1" == "-task" ]; then
-echo "Задание"
-echo "14. Сравнить две строковые переменные и если первая больше, то вывести сообщение об этом, используя команду test"
+echo "Task"
+echo "14. Check two strings, if the first is greater, output a message accordingly, using test command"
 echo 
 echo 
 fi
-echo "Enter first string: "
+echo "Enter the first string: "
 read str1
-echo "Enter second string: "
+echo "Enter the second string: "
 read str2
 if test "$str1" \> "$str2"
 then
-  echo "First string is greater than second"
+  echo "The first string is greater than the second"
 fi
