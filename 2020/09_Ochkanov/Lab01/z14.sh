@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ -n "$1" ] && [ "$1" == "-task" ]; then
 echo "Task"
-echo "14. Check two strings, if the first is greater, output a message accordingly, using test command"
+echo "14. Сompare two strings, if the first is greater, output a message accordingly, using test command"
 echo 
 echo 
 fi
