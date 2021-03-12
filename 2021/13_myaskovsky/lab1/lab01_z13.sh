@@ -6,7 +6,10 @@ echo "Сравнить две числовые переменные и если 
 fi
 
 if [ "$1" == "test" ]; then
-	if (( $2 > $3 ));
+	firstNum=$2
+	secondNum=$3
+
+	if (( firstNum>secondNum ));
 		then echo "$2 greater then $3";
 	fi
 fi
