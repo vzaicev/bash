@@ -12,7 +12,6 @@ function isParamsPassed {
 	if [ -n "$1" ] 
 	then
 		return  0
-	
 	else
 		return 1
 	fi
@@ -38,9 +37,7 @@ function printNumbers {
 
 function main {
 	if isParamsPassed $1; then 
-		#echo passed params
 		printNumbers "$@"
-		
 	else 
 		echo no params
 	fi
