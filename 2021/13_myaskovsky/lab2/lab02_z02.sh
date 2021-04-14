@@ -1,12 +1,15 @@
 #!/bin/bash
-if [ -n "$1" ] && [ "$1" == "-task" ];
-then
-	echo "Задание"
-	echo "2. Написать функцию вычисления факториала заданного числа."
-	echo  "Число передается в скрипт как параметр."
-	echo
-	exit
-fi
+for argument in "$@"
+do
+  shift
+  if [ $argument == "-task" ]; then
+    echo "Задание"
+    echo "2. Написать функцию вычисления факториала заданного числа."
+    echo  "Число передается в скрипт как параметр."
+    continue
+  fi
+  set -- "$@" "$argument"
+done
 
 function getFactorial {
   counter=$1
@@ -19,5 +22,23 @@ function getFactorial {
 	echo $answer
 }
 
+function isNumber {
+  re='^[0-9]+$'
+  if ! [[ $1 =~ $re ]];
+  then
+    echo "error: Not a number" >&2;
+    return 1
+  fi
+  return 0
+}
 
-echo $(getFactorial $1)
+function main() {
+  if isNumber $1; then
+    echo $(getFactorial $1)
+  else
+    echo wrong input
+  fi
+}
+
+main $1;
+# max input is 59
