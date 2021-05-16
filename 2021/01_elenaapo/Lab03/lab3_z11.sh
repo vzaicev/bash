@@ -6,4 +6,5 @@ then
 	echo  
 	echo
 fi
-	sed = file.txt | sed -n '$='
+	sed = file.txt | sed -n '$=' text.txt
+	
