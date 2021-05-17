@@ -6,4 +6,4 @@ then
 	echo 
 	echo
 fi
-	sed -n '/regexp/{g;1!p;};h'
+	sed -n '/regexp/{g;1!p;};h' file.txt
