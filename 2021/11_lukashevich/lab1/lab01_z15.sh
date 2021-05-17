@@ -10,11 +10,16 @@ fi
 echo -n "Введите значения переменных "
 read a
 read b
-if test "$a" -eq "$b"
+if  [[ "$a" == *[0-9]* && "$b" == *[0-9]* ]] 
+then
+        if test "$a" -eq "$b"
 then
 	echo "yes"	
 else
 	echo "no"
+fi
+else 
+	echo "Неверное значение"
 fi
 echo "Конец"
 
