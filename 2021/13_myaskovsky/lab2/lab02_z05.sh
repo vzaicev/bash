@@ -10,17 +10,45 @@ then
 	exit
 fi
 
-#function isCyrillic {}
-#
-#function isLatin {}
+function isCyrillic {
+  reCyrillic="[ЁёА-я]"
+  if [[ $1 =~ $reCyrillic ]];
+  then
+    return 0
+  else
+    return 1
+  fi
+}
 
-function readWordsFromFile {
-  tr -s '[:blank:]' '[\n*]' < text_for_z05.txt |
-  while IFS= read -r word;
-  do
-    echo "$word"
-  done
+function isLatin {
+  reLatin="[A-Za-z]"
+  if [[ $1 =~ $reLatin ]];
+  then
+    return 0
+  else
+    return 1
+  fi
+}
+
+function countWordsFromFile {
+  latinCounter=0
+  cyrillicCounter=0
+
+  while IFS= read -r word; do
+    if isLatin $word;
+    then
+      latinCounter=$((latinCounter+1))
+    fi
+
+    if isCyrillic $word;
+    then
+      cyrillicCounter=$((cyrillicCounter+1))
+    fi
+  done <<<$(tr -s '[:blank:]' '[\n*]' < text_for_z05.txt)
+
+  echo $latinCounter
+  echo $cyrillicCounter
 }
 
 
-readWordsFromFile
+countWordsFromFile

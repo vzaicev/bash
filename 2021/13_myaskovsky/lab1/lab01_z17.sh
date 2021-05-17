@@ -10,7 +10,7 @@ echo "Введите первую числовую переменную:"
 read val1
 echo "Введите вторую числовую переменную:"
 read val2 
-if [ $val1 -gt $val2 ]
+if [ $val1 -gt $val2 2> /dev/null ]
 then
 	echo "The test value $val1 is greater than $val2"
 else
