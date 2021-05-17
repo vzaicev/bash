@@ -7,4 +7,11 @@ then
 	echo "нет возможности запустить в фоновом режиме"
 	echo "после команды fg процесс должен завершиться."
 	exit
+else
+
+	for ((i=0; i<1000; i++))
+	do
+		echo Message
+		sleep 1
+	done
 fi
