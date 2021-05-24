@@ -6,4 +6,4 @@ then
 	echo 
 	echo
 fi
-	sed '/^$/n;G' file.txt 
+	sed 'G;G;n' file.txt 
