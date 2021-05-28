@@ -10,6 +10,7 @@ then
 else
   wget https://www.onliner.by/ &>/dev/null
   ourpage=$(cat index.html)
+  #
   echo "$ourpage" | sed  -e 's/\s+/ /g' -e 's/\(.*\)/\L\1/g' -e 's/[^A-Za-z ]//g' -e :a -e 's/<[^>]*>//g;/</N;//ba'  | tr ' ' '\n' | sort | uniq
   exit 0
 fi
