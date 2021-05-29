@@ -1,17 +1,13 @@
 #!/bin/bash
 if [ -n "$1" ] && [ "$1" == "-task" ]; then
 echo "Задание"
-echo "25. Создать функцию в командной строке, выводящую только четные параметры, переданные в скрипт и запустить ее."
+echo "Сравнить две строковые переменные и вывести сообщение yes или no, используя команду test."
 echo
 echo
 fi
-fun() {
-	for parameter in "$@"
-	do
-		if [ "$((parameter % 2))" -eq 0 ] && [ "$parameter" != "-task" ]; then
-		echo "$parameter"
-		fi
-	done
- }
-fun "$@"
-echo "Done"
+s1="hi"
+s2="hi"
+if test "$s1" == "$s2";
+then echo "match"; 
+else echo "unmatch";
+fi
