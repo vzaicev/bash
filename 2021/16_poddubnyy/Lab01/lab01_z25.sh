@@ -6,12 +6,12 @@ echo
 echo
 fi
 fun() {
-	for parameter in "$@"
+	for par in "$@"
 	do
-		if [ "$((parameter % 2))" -eq 0 ] && [ "$parameter" != "-task" ]; then
-		echo "$parameter"
+		if [ "$((par % 2))" -eq 0 ] && [ "$par" != "-task" ]; then
+		echo "$par"
 		fi
-	done
+	done		
  }
 fun "$@"
-echo "Done"
+echo "Complete"
