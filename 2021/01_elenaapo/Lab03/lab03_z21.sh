@@ -15,10 +15,6 @@ do
   ((i++))
 done
 
-if [ $# -ne 4 ]; then 
-  echo "Need at least one argument."
-  exit
-fi
 
-cat $1 | sed 's/Hi\\bro/Yo\\bro/' file.txt
+sed 's/Hi\\bro/Yo\\bro/;s/Hi\\bro/Yo\\bro/;s/Hi\\bro/Yo\\bro/;s/Hi\\bro/Yo\\bro/' file.txt
 
