@@ -15,7 +15,22 @@ fi
 		array[$index]="$line"
 		index=$(($index+1)) 
 	done < file
-	for ((a=10; a < ${#array[@]}; a++))
+	for ((a=10; a < ${#array[@]}; a++)) 
 	do
 		echo ${array[$a]} | awk '{print $1;}'
 	done
+	flag = 0;
+	for ((a=10; a < ${#array[@]}; a++))
+	do
+		if [[ $1 == ${array[$a]} ]];
+		then
+			echo YES
+			flag = 1
+		fi
+	done
+	
+	if [[ flag == 0 ]];
+	then
+		echo NO
+	fi
+	
