@@ -34,6 +34,7 @@ function countWordsFromFile {
   latinCounter=0
   cyrillicCounter=0
 
+  # internal field separator
   while IFS= read -r word; do
     if isLatin $word;
     then
@@ -44,6 +45,11 @@ function countWordsFromFile {
     then
       cyrillicCounter=$((cyrillicCounter+1))
     fi
+  #   <<< is known as here-string . Instead of typing in text, you give a pre-made string of text to a program.
+  #   tr command can be used in the following way to convert any string from uppercase to lowercase.
+  #   [:blank:] contains only those characters which produce "empty space" within the same line,
+  # i.e. "space" and horizontal tab \t
+  #
   done <<<$(tr -s '[:blank:]' '[\n*]' < text_for_z05.txt)
 
   echo $latinCounter
