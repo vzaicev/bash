@@ -5,8 +5,8 @@ echo "16. Сравнить две строковые переменные и в�
 echo
 echo
 fi
-s1="test"
-s2="test"
+s1="hi"
+s2="hi"
 if test "$s1" == "$s2";
 then echo "yes"; 
 else echo "no";
